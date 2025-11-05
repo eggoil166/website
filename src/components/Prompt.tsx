@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 interface PromptProps {
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;

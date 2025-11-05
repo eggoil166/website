@@ -9,7 +9,8 @@ interface NameProps {
 
 const Name: React.FC<NameProps> = ({ name = "some name", href = "/" }) => {
   const [displayText, setDisplayText] = useState<string>(name);
-  const [isHovering, setIsHovering] = useState<boolean>(false);
+  // isHovering value is not read; keep setter only to trigger scramble state changes
+  const [, setIsHovering] = useState<boolean>(false);
   const scrambleIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const revealIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const fixedLettersRef = useRef<number>(0);

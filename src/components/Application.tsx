@@ -1,12 +1,10 @@
-import React from 'react';
 import { appMap } from '../lib/pages';
 
 interface ApplicationProps {
     activeApp: string | null;
-    setActiveApp: (name: string | null) => void;
 }
 
-export default function Application({ activeApp, setActiveApp }: ApplicationProps) {
+export default function Application({ activeApp }: ApplicationProps) {
     if (!activeApp) {
         return (
             <div

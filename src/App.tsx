@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div>
       <Name name="EGGOIL" href="/" />
-      <Application activeApp={activeApp} setActiveApp={setActiveApp} />
+  <Application activeApp={activeApp} />
       <div className="container-screen">
         <div className="terminal-frame">
           <Terminal setActiveApp={setActiveApp} />

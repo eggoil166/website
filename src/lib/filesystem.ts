@@ -1,5 +1,10 @@
-export type FileNode = string | React.ReactNode;
-export type DirNode = Record<string, FileNode | DirNode>;
+import type { ReactNode } from 'react';
+
+export type FileNode = string | ReactNode;
+
+export interface DirNode {
+  [key: string]: FileNode | DirNode;
+}
 
 export const fileSystem: DirNode = {
       'readme.txt': 'Hi! My name is Daniel Yi (aka eggoil), current freshman at University of Maryland College Park studying CS/Math. Move along the directory to discover more about me and my projects.',

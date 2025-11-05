@@ -96,7 +96,7 @@ export default function Terminal({ setActiveApp }: TerminalProps) {
     }
     const result = fn(args, cwd, setCwd, setActiveApp);
 
-    if (typeof result === 'object' && result.clear) {
+    if (result != null && typeof result === 'object' && (result as any).clear) {
       setLines([]);
       return;
     }
